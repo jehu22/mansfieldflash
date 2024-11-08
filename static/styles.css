@@ -1,0 +1,77 @@
+:root {
+  --gold: #eab308;
+  --dark-gold: #7a5e00;
+}
+
+body {
+  background-color: white;
+  color: #1a1a1a;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.gold-border {
+  border-color: var(--gold);
+}
+
+.gold-text {
+  color: var(--gold);
+}
+
+.card {
+  background-color: white;
+  border: 1px solid rgba(234, 179, 8, 0.3);
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(234, 179, 8, 0.1);
+}
+
+.news-link {
+  transition: all 0.2s ease;
+}
+
+.news-link:hover {
+  background-color: rgba(234, 179, 8, 0.05);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px rgba(234, 179, 8, 0.15);
+}
+
+.news-link:hover .arrow {
+  transform: translateX(4px);
+  color: var(--dark-gold);
+}
+
+.arrow {
+  transition: all 0.2s;
+}
+
+.weather-icon {
+  stroke: var(--gold);
+  fill: none;
+  width: 32px;
+  height: 32px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.site-header {
+  background-color: black;
+  border-bottom: 2px solid var(--gold);
+}
+
+.site-title {
+  color: var(--gold);
+  text-decoration: none;
+}
+
+.site-title:hover {
+  color: var(--dark-gold);
+}
+
+@media (max-width: 768px) {
+  .weather-grid {
+    grid-template-columns: 1fr;
+  }
+}

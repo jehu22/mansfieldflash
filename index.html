@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}The Mansfield Flash - Index{% endblock %}
+
+{% block main %}
+<div class="weather-section">
+  <h2>Today's Weather:</h2>
+  <div class="weather-info">
+    <p><strong>High:</strong> {{ high_temp }}°{{ temp_unit }} | <strong>Low:</strong> {{ low_temp }}°{{ temp_unit }}</p>
+    <p><strong>Overall Outlook:</strong> {{ detailed_forecast }} {{ rain_chance }}</p>
+  </div>
+</div>
+
+<div class="news-section">
+  <h2>Mansfield's Top Stories Today</h2>
+  <ul class="headlines">
+    {% for entry in entries %}
+    <li><a class="headline" href="{{ entry.link }}">{{ entry.title }}</a></li>
+    {% endfor %}
+  </ul>
+</div>
+{% endblock %}

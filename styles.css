@@ -1,0 +1,132 @@
+:root {
+  --primary-yellow: #ffd700;
+  --black: #000000;
+  --light-gray: #f5f5f5;
+  --off-white: #fafafa;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background-color: var(--off-white);
+  color: black;
+  line-height: 1.6;
+}
+
+.navbar {
+  background-color: var(--primary-yellow) !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--black) !important;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: var(--black);
+}
+
+main {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--black);
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+a {
+  color: var(--black);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--primary-yellow);
+  text-decoration: underline;
+}
+
+.weather-section {
+  background-color: var(--light-gray);
+  border-left: 4px solid var(--primary-yellow);
+  padding: 1rem 1rem 1rem 1rem;
+  margin-bottom: 2rem;
+  border-radius: 0 8px 8px 0;
+}
+
+.weather-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  text-align: left;
+  padding-left: 5%;
+  font-size: 1.2em;
+}
+
+.news-section {
+  background-color: white;
+}
+
+footer {
+  background-color: var(--black);
+  color: var(--off-white);
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 2rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+
+  main {
+    padding: 1rem;
+  }
+}
+
+.list-unstyled,
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+a.headline {
+  color: #333; /* A darker shade than black for better readability */
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+  padding: 2px 0; /* Adds a little vertical padding */
+  border-bottom: 2px solid transparent; /* Prepares for hover effect */
+  display: inline-block; /* Allows the border to take effect */
+  line-height: 1.4; /* Improves readability for multi-line headlines */
+  text-align: left;
+  font-size: 1.2em;
+}
+
+li {
+  text-align: left;
+  padding-left: 5%;
+}

@@ -1,5 +1,9 @@
 name: Daily News Generator
 
+# ✅ Add write permission so the job can push commits
+permissions:
+  contents: write
+
 # Run every day at 5 AM CT (10 AM UTC) and allow manual trigger
 on:
   schedule:
@@ -31,7 +35,7 @@ jobs:
       - name: Run news generator
         run: python generate_static_news.py
         
-      # Push to Git
+      # 5️⃣ Commit and push changes
       - name: Commit and push changes
         run: |
           git config --global user.name "github-actions"

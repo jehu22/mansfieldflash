@@ -3,8 +3,9 @@ from fetcher import fetch_and_filter
 from jinja2 import Environment, FileSystemLoader
 from weather import get_weather_data, generate_weather_summary
 
-# Ensure the public folder exists
+# Make sure the public
 os.makedirs("public", exist_ok=True)
+OUTPUT_FILE = os.path.join("public", "index.html")
 
 # --- Step 1: Fetch news once ---
 entries = fetch_and_filter()
@@ -40,7 +41,7 @@ output = template.render(
 )
 
 # --- Step 4: Save to public folder ---
-with open("public/index.html", "w", encoding="utf-8") as f:
+with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
     f.write(output)
 
 print("✅ Static news page generated with", len(entries), "entries!")

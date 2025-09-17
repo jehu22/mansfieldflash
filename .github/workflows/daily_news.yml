@@ -14,6 +14,9 @@ jobs:
       # 1️⃣ Check out the repo
       - name: Checkout repo
         uses: actions/checkout@v3
+        with:
+          persist-credentials: false
+
 
       # 2️⃣ Set up Python
       - name: Set up Python
@@ -37,3 +40,5 @@ jobs:
           git add public/index.html
           git commit -m "Update static HTML [skip ci]" || echo "No changes to commit"
           git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/jehu22/mansfieldflash.git HEAD:main
+
+

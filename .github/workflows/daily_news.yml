@@ -29,4 +29,4 @@ jobs:
 
       # 4️⃣ Run your news generator script
       - name: Run news generator
-        run: python generate_st_
+        run: python generate_static_news.py

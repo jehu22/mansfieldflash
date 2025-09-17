@@ -1,6 +1,10 @@
+import os
 from fetcher import fetch_and_filter
 from jinja2 import Environment, FileSystemLoader
 from weather import get_weather_data, generate_weather_summary
+
+# Ensure the public folder exists
+os.makedirs("public", exist_ok=True)
 
 # --- Step 1: Fetch news once ---
 entries = fetch_and_filter()
